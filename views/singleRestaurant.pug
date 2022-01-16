@@ -1,0 +1,66 @@
+html(lang = 'en')
+    head 
+        title #{singleRest.name}
+        link(rel='stylesheet' href='/singleRest.css')
+        link(href="https://fonts.googleapis.com/css2?family=M+PLUS+1:wght@300&family=Noto+Serif+Display:ital,wght@1,300&family=Roboto+Slab&family=Source+Serif+Pro:ital,wght@0,700;1,400&display=swap" rel="stylesheet")
+        link(href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@1,600&display=swap" rel="stylesheet")
+
+    body#body
+        - keys = Object.keys(singleRest.menu);
+
+        div#header 
+            a(href='/home') Homepage
+            a(href='/restaurants') Browse Restaurants 
+            a(href='/addRestaurant') Add Restaurant 
+
+        div#basicInfo
+            h2.labels Restaurant ID: #{singleRest.id}
+            h2.labels Restaurant Name: 
+            input(type="text", value=singleRest.name, id='pugRestName')
+            h2.labels delivery fee:
+            input(type="text", value=singleRest.delivery_fee, id='pugDeliveryFee')
+            h2.labels minimum order:
+            input(type="text", value=singleRest.min_order, id='pugMinOrder')
+
+        div#addNewCategory
+            br
+            h2.labels Add Category:
+            p Category Name:
+            input(type="text", id='newCategory')
+            br
+            input(type="submit", value="Add Category", onclick='addCategory()')
+
+        div#addNewItem
+            br
+            h2.labels Add Item:
+            p Select Category: 
+            select#selectCategory
+                each key in keys 
+                    option #{key}
+            p Item Name: 
+            input(type="text", id='newName')
+            br
+            p Description:
+            input(type="text", id='newDescription')
+            br
+            p Price: 
+            input(type="text", id='newPrice')
+            br
+            input(type="submit", value="Add Item", onclick='addItem()')
+
+        div#menu 
+            h2.labels Menu:
+            - counter = 0;
+            each category in singleRest.menu
+                div(id=keys[counter])
+                    h3.subLabels #{keys[counter]}
+                    each item in category 
+                        p #{item.name} ($#{item.price})
+                        p #{item.description}
+                        br
+                - counter += 1;
+        
+        input(type='submit', value="Submit", onclick='updateRestaurant()')
+
+        script!= `const object = ${JSON.stringify(singleRest)};`
+        script(src='../../client.js') 

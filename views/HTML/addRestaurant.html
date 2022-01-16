@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang='en'>
+    <head>
+        <title>Add Restaurant</title>
+        <link rel='stylesheet' href='/addRest.css'>
+        <link href="https://fonts.googleapis.com/css2?family=M+PLUS+1:wght@300&family=Noto+Serif+Display:ital,wght@1,300&family=Roboto+Slab&family=Source+Serif+Pro:ital,wght@0,700;1,400&display=swap" rel="stylesheet">
+    </head>
+
+    <body id='body'>
+        <div id='header'>
+            <a href='/home'>Homepage</a>
+            <a id='testing' href='/restaurants'>Browse Restaurants</a>
+            <a href='/addrestaurant'>Add Restaurant</a>
+        </div>
+
+        <div id='restInfo'>
+            <label class='inputLabel'>Restaurant Name: </label>
+            <input type='text' id='addRestName' class='newField'> <br>
+            <label class='inputLabel'>Delivery Fee: </label>
+            <input type='text' id='addDeliveryFee' class='newField'> <br>
+            <label class='inputLabel'>Minimum Order: </label>
+            <input type='text' id='addMinOrder' class='newField'> <br>
+            <input type='submit' id='submitButton' value='Submit' onclick=postData()>
+        </div>
+        
+        <script src='client.js'></script>
+    </body>
+</html>

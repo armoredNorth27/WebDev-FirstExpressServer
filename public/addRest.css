@@ -1,0 +1,54 @@
+#body{
+    background-color: rgb(157, 194, 230);
+}
+
+#header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+#restInfo{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+/* Deals with labels and their input fields */
+.inputLabel{
+    font-family: 'Roboto Slab', serif;
+    font-size: large;
+}
+
+.newField{
+    width:15%;
+}
+
+/* Deals with submit button */
+#submitButton {
+	box-shadow: 0px 0px 0px 2px #9fb4f2;
+	background:linear-gradient(to bottom, #7892c2 5%, #476e9e 100%);
+	background-color:#7892c2;
+	border-radius:10px;
+	border:1px solid #4e6096;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:19px;
+	padding:12px 37px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #283966;
+    width: 15%;
+}
+
+#submitButton:hover {
+	background:linear-gradient(to bottom, #476e9e 5%, #7892c2 100%);
+	background-color:#476e9e;
+}
+
+#submitButton:active {
+	position:relative;
+	top:1px;
+}

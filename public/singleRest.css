@@ -1,0 +1,18 @@
+#body{
+    background-color: rgb(157, 194, 230);
+}
+
+#header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.labels{
+    font-family: 'Roboto Slab', serif;
+}
+
+.subLabels{
+    font-family: 'Nunito', sans-serif;
+}

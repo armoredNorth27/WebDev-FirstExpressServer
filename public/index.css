@@ -1,0 +1,18 @@
+#header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+#welcome{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    font-size: x-large;
+    font-family: 'M PLUS 1', sans-serif;
+}
+
+#body{
+    background-color: rgb(157, 194, 230);
+}

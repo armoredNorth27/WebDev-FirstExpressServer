@@ -1,0 +1,20 @@
+html(lang='en')
+    head 
+        title Restaurants
+        link(rel='stylesheet' href='/restaurants.css')
+        link(href="https://fonts.googleapis.com/css2?family=M+PLUS+1:wght@300&family=Noto+Serif+Display:ital,wght@1,300&family=Roboto+Slab&family=Source+Serif+Pro:ital,wght@0,700;1,400&display=swap" rel="stylesheet")
+
+    body#body
+        div#header 
+            a(href='/home') Homepage
+            a(href='/restaurants') Browse Restaurants 
+            a(href='/addRestaurant') Add Restaurant 
+
+        div#restaurants
+            h2 Restaurants:
+
+            each restaurant in allRestaurants
+                a(href=`/restaurants/${restaurant.id}`) #{restaurant.name}
+                br
+
+        script(src='client.js') 
