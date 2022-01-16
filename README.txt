@@ -63,5 +63,4 @@ Installation/Running instructions:
 
 3 - Once the installation has completed, run the command "npm run start". This will start the server.
 
-4 - Go to the following link "http://localhost:3000/". This will bring you to the homepage of the assignment. From 
-here you can mark the assignment as needed.
+4 - Go to the following link "http://localhost:3000/"
